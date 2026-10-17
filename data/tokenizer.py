@@ -27,7 +27,7 @@ def build_tokenizer(dataset, lang_code, vocab_size=32000):
     )
     
     # 4. Train the tokenizer on the dataset sentences
-    tokenizer.train_from_iterator(get_all_sentences(dataset, lang_code), trainer=validator_check(trainer))
+    tokenizer.train_from_iterator(get_all_sentences(dataset, lang_code), trainer=trainer)
     
     return tokenizer
 
