@@ -20,23 +20,6 @@
   <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
 </p>
 
-
-# ⚡                   Seq2Seq Transformer | English → Italian
-
-<p align="center">
-  <strong>From Attention to Understanding.</strong>
-  <br>
-  A Transformer built from scratch. A journey into neural machine translation.
-  <br><br>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch">
-  <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA">
-  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face">
-  <img src="https://img.shields.io/badge/TensorBoard-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorBoard">
-</p>
-
----
-
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/b14d09a2-7eaf-4af0-a722-34eafd9369b1" />
 
 
