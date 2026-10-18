@@ -1,3 +1,26 @@
+<p align="center">
+  <img src="assets/transformer-banner.svg"
+       alt="Seq2Seq Transformer — English to Italian"
+       width="100%">
+</p>
+
+<h1 align="center">
+  ⚡ Seq2Seq Transformer
+</h1>
+
+<p align="center">
+  <strong>English → Italian Neural Machine Translation</strong>
+  <br>
+  Built from scratch with PyTorch
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
+</p>
+
+
 # ⚡                   Seq2Seq Transformer | English → Italian
 
 <p align="center">
