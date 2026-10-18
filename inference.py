@@ -66,7 +66,6 @@ def visualize_attention(encoder_tokens, decoder_tokens, attention_weights, layer
     plt.yticks(rotation=0)
     plt.tight_layout()
     fig.savefig("attention_map.png")
-    print("Attention heatmap saved as 'attention_map.png'! 📊")
     image_buffer = BytesIO()
     fig.savefig(image_buffer, format="png")
     image_buffer.seek(0)
