@@ -69,7 +69,15 @@ if __name__ == "__main__":
     src_vocab_size = tokenizer_en.get_vocab_size()
     tgt_vocab_size = tokenizer_it.get_vocab_size()
     
-    model = Transformer(src_vocab_size, tgt_vocab_size, d_model=768, num_layers=8, num_heads=12, d_ff=3072).to(device)
+    model = Transformer(
+        src_vocab_size, 
+        tgt_vocab_size, 
+        d_model=768, 
+        num_layers=8, 
+        num_heads=12, 
+        d_ff=3072, 
+        max_len=128  # <-- Add this parameter here!
+    ).to(device)
     
     try:
         model.load_state_dict(torch.load("transformer_en_it.pt", map_location=device))
