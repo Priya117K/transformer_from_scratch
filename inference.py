@@ -76,11 +76,14 @@ if __name__ == "__main__":
         num_layers=8, 
         num_heads=12, 
         d_ff=3072, 
-        max_len=128  # <-- Add this parameter here!
+        max_len=128
     ).to(device)
     
     try:
-        model.load_state_dict(torch.load("transformer_en_it.pt", map_location=device))
+        state_dict = torch.load("transformer_en_it.pt", map_location=device)
+        state_dict.pop("encoder.pos_encoding.pe", None)
+        state_dict.pop("decoder.pos_encoding.pe", None)
+        model.load_state_dict(state_dict, strict=False)
         print("Model weights loaded successfully!")
     except FileNotFoundError:
         print("Model weights file 'transformer_en_it.pt' not found. Run train.py first!")
