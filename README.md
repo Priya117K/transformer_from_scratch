@@ -17,7 +17,7 @@
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/b14d09a2-7eaf-4af0-a722-34eafd9369b1" />
 
 
-## 🌌 The Mission
+##  The Mission
 
 What happens when you build a Transformer from the ground up?
 
@@ -27,7 +27,7 @@ Trained on the OPUS Books English–Italian dataset, the model learns to generat
 
 No high-level Transformer model abstraction — the core architecture is implemented from scratch.
 
-## 🧠 Under the Hood
+##  Under the Hood
 
 The Transformer consists of two major components:
 
@@ -38,7 +38,7 @@ The Transformer consists of two major components:
 - Residual connections and layer normalization
 - Padding masks
 
-**🔹 Decoder — Generating the Translation**
+** Decoder — Generating the Translation**
 - Target token embeddings and positional encodings
 - Masked multi-head self-attention
 - Encoder–decoder cross-attention
@@ -46,7 +46,7 @@ The Transformer consists of two major components:
 - Residual connections and layer normalization
 - Causal masks for autoregressive generation
 
-**⚡ Core Mechanisms**
+** Core Mechanisms**
 - Scaled dot-product attention
 - Multi-head attention
 - Causal and padding masks
@@ -64,17 +64,7 @@ The Transformer consists of two major components:
 <img width="1276" height="517" alt="Screenshot 2026-10-18 110420" src="https://github.com/user-attachments/assets/3dc373a0-eb63-46d3-a7a0-188f667c2af5" />
 
 
-
-
-
-
-
-
-
-
-
-
-## 🏗️ Architecture at a Glance
+## Architecture at a Glance
 
 ```text
              ENGLISH INPUT
@@ -125,7 +115,7 @@ The Transformer consists of two major components:
             ITALIAN OUTPUT
 ```
 
-## 🚀 Project Highlights
+##  Project Highlights
 
 | Component | Implementation |
 |---|---|
@@ -142,7 +132,7 @@ The Transformer consists of two major components:
 | Evaluation | BLEU, WER, CER |
 | Interpretability | Multi-head attention visualizations |
 
-## 📚 Dataset
+##  Dataset
 
 **OPUS Books — English to Italian**
 
@@ -152,7 +142,7 @@ Each pair consists of an English sentence and its corresponding Italian translat
 
 🔗 Dataset: [Hugging Face — OPUS Books](https://huggingface.co/datasets/Helsinki-NLP/opus_books)
 
-## 📊 Evaluation & Interpretability
+##  Evaluation & Interpretability
 
 Translation quality is evaluated using three metrics:
 
@@ -164,7 +154,7 @@ Attention maps are visualized to inspect how different attention heads distribut
 
 > Actual evaluation scores and sample translations can be added here from the model's validation results.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Language:** Python
 - **Deep Learning:** PyTorch
@@ -172,7 +162,7 @@ Attention maps are visualized to inspect how different attention heads distribut
 - **Dataset & Tokenization Tools:** Hugging Face Datasets and Tokenizers
 - **Experiment Visualization:** TensorBoard
 
-## ⚙️ Getting Started
+## Getting Started
 
 Clone the repository:
 
@@ -191,7 +181,7 @@ Run the training or inference scripts using the commands defined by your impleme
 
 *Note: Replace the repository name and commands with the actual values from your project.*
 
-## 💡 What I Learned
+##  What I Learned
 
 - Building the Transformer architecture from first principles.
 - Understanding scaled dot-product attention and multi-head attention.
@@ -200,7 +190,7 @@ Run the training or inference scripts using the commands defined by your impleme
 - Training a neural machine translation model with PyTorch and CUDA.
 - Evaluating generated translations and visualizing attention patterns.
 
-## 📖 References
+##  References
 
 - Vaswani et al. — [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
 - [OPUS Books Dataset](https://huggingface.co/datasets/Helsinki-NLP/opus_books)
