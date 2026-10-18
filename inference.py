@@ -15,10 +15,13 @@ tokenizer_en: Tokenizer | None = None
 tokenizer_it: Tokenizer | None = None
 
 
-def greedy_decode(model, src, src_mask, max_len, bos_idx, eos_idx, device):
+def greedy_decode(model, src, src_mask, max_len, bos_idx, eos_idx, device, repetition_penalty=1.2):
     """
     Generates target tokens one by one autoregressively.
     """
+    if repetition_penalty <= 0:
+        raise ValueError("repetition_penalty must be greater than zero.")
+
     model.eval()
     with torch.no_grad():
         enc_output = model.encode(src, src_mask)
@@ -28,9 +31,16 @@ def greedy_decode(model, src, src_mask, max_len, bos_idx, eos_idx, device):
         for _ in range(max_len - 1):
             tgt_mask = causal_mask(decoder_input.size(1)).type_as(src_mask).to(device)
             dec_output = model.decode(decoder_input, enc_output, src_mask, tgt_mask)
-            prob = model.project(dec_output[:, -1])
+            logits = model.project(dec_output[:, -1])
+            generated_tokens = decoder_input.unique()
+            repeated_logits = logits[:, generated_tokens]
+            logits[:, generated_tokens] = torch.where(
+                repeated_logits < 0,
+                repeated_logits * repetition_penalty,
+                repeated_logits / repetition_penalty,
+            )
             
-            _, next_word = torch.max(prob, dim=1)
+            _, next_word = torch.max(logits, dim=1)
             
             decoder_input = torch.cat(
                 [decoder_input, torch.tensor([[next_word.item()]], dtype=torch.long, device=device)], dim=1
