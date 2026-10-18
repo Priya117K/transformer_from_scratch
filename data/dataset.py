@@ -29,8 +29,16 @@ class BilingualDataset(Dataset):
         tgt_text = src_target_pair['translation'][self.tgt_lang]
 
         # Tokenize text into IDs
+       # Tokenize text into IDs and truncate if they exceed max_len
         src_tokens = self.tokenizer_en.encode(src_text).ids
         tgt_tokens = self.tokenizer_it.encode(tgt_text).ids
+
+        # Truncate tokens if they are too long (-2 for BOS/EOS on src, -1 on tgt)
+        max_src_len = self.max_len - 2
+        max_tgt_len = self.max_len - 1
+        
+        src_tokens = src_tokens[:max_src_len]
+        tgt_tokens = tgt_tokens[:max_tgt_len]
 
         # Calculate how much padding is needed to match max_len
         src_num_padding = self.max_len - len(src_tokens) - 2  # Accounting for BOS and EOS
