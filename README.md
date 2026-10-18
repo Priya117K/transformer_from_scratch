@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="assets/transformer-banner.svg"
-       alt="Seq2Seq Transformer — English to Italian"
-       width="100%">
-</p>
+
 
 <h1 align="center">
   ⚡ Seq2Seq Transformer
