@@ -14,6 +14,9 @@
 
 ---
 
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/b14d09a2-7eaf-4af0-a722-34eafd9369b1" />
+
+
 ## 🌌 The Mission
 
 What happens when you build a Transformer from the ground up?
