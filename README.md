@@ -54,8 +54,6 @@ The Transformer consists of two major components:
 <img width="1363" height="645" alt="Screenshot 2026-10-18 091942" src="https://github.com/user-attachments/assets/a7a72dcf-0203-4175-8fc1-dcbb1a539986" />
 <img width="1359" height="578" alt="Screenshot 2026-10-18 100310" src="https://github.com/user-attachments/assets/3f5fb796-dccf-475b-9412-f4f4027d2cb6" />
 <img width="1366" height="584" alt="Screenshot 2026-10-18 100325" src="https://github.com/user-attachments/assets/dc664834-600b-4c16-9ea3-cf7131670083" />
-<img width="1366" height="683" alt="Screenshot 2026-10-18 101931" src="https://github.com/user-attachments/assets/e2d8ca08-2041-4474-981b-2e5d4150f8aa" />
-<img width="1366" height="646" alt="Screenshot 2026-10-18 102027" src="https://github.com/user-attachments/assets/6069f6c2-9dbd-4e6e-8606-9df06e469329" />
 <img width="1244" height="408" alt="Screenshot 2026-10-18 102406" src="https://github.com/user-attachments/assets/64495c73-03ba-4643-a58e-3b2a1135cbd3" />
 <img width="1202" height="629" alt="Screenshot 2026-10-18 104032" src="https://github.com/user-attachments/assets/1fb92f20-1f99-47f0-b575-2cd1f794d7ef" />
 <img width="1000" height="514" alt="Screenshot 2026-10-18 110328" src="https://github.com/user-attachments/assets/39217b08-cc03-464d-b2b8-4fd44c089bfb" />
