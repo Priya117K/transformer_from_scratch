@@ -1,4 +1,4 @@
-# ⚡ Seq2Seq Transformer | English → Italian
+# ⚡                   Seq2Seq Transformer | English → Italian
 
 <p align="center">
   <strong>From Attention to Understanding.</strong>
@@ -31,7 +31,7 @@ No high-level Transformer model abstraction — the core architecture is impleme
 
 The Transformer consists of two major components:
 
-**🔹 Encoder — Understanding the Input**
+** Encoder — Understanding the Input**
 - Token embeddings and sinusoidal positional encodings
 - Multi-head self-attention
 - Position-wise feed-forward networks
