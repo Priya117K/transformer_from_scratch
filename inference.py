@@ -104,7 +104,43 @@ if __name__ == "__main__":
     src_mask = (src != 0).unsqueeze(0).unsqueeze(0).int().to(device)
     
     # Run greedy decode
-    translated_tokens = greedy_decode(model, src, src_mask, max_len=50, bos_idx=2, eos_idx=3, device=device)
+    attention_by_layer = {}
+
+    def capture_attention(layer_idx):
+        def hook(*hook_args):
+            attention_by_layer[layer_idx] = hook_args[2][1].detach()
+
+        return hook
+
+    hooks = [
+        layer.cross_attn.register_forward_hook(capture_attention(layer_idx))
+        for layer_idx, layer in enumerate(model.decoder.layers)
+    ]
+    try:
+        translated_tokens = greedy_decode(model, src, src_mask, max_len=50, bos_idx=2, eos_idx=3, device=device)
+        decoder_input = translated_tokens.unsqueeze(0)
+        tgt_mask = causal_mask(decoder_input.size(1)).type_as(src_mask).to(device)
+        with torch.no_grad():
+            enc_output = model.encode(src, src_mask)
+            model.decode(decoder_input, enc_output, src_mask, tgt_mask)
+    finally:
+        for hook in hooks:
+            hook.remove()
+
     translated_text = tokenizer_it.decode(translated_tokens.tolist())
     
     print(f"Translated Italian: {translated_text}")
+
+    encoder_tokens = [
+        tokenizer_en.id_to_token(token_id) or f"<{token_id}>"
+        for token_id in src.squeeze(0).tolist()
+    ]
+    decoder_tokens = [
+        tokenizer_it.id_to_token(token_id) or f"<{token_id}>"
+        for token_id in translated_tokens.tolist()
+    ]
+    attention_weights = torch.stack([
+        attention_by_layer[layer_idx][0]
+        for layer_idx in range(len(model.decoder.layers))
+    ])
+    visualize_attention(encoder_tokens, decoder_tokens, attention_weights)
