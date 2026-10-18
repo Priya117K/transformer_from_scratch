@@ -10,7 +10,7 @@ from data.dataset import BilingualDataset
 def train_model():
     # 1. Device configuration (uses GPU if available)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Using device: {device}")
+    print(f"Using device: {device}", flush=True)
 
     # 2. Load trained tokenizers
     tokenizer_en = Tokenizer.from_file("data/tokenizer_en.json")
