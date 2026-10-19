@@ -33,14 +33,14 @@ No high-level Transformer model abstraction — the core architecture is impleme
 
 The Transformer consists of two major components:
 
-** Encoder — Understanding the Input**
+**Encoder — Understanding the Input**
 - Token embeddings and sinusoidal positional encodings
 - Multi-head self-attention
 - Position-wise feed-forward networks
 - Residual connections and layer normalization
 - Padding masks
 
-** Decoder — Generating the Translation**
+**Decoder — Generating the Translation**
 - Target token embeddings and positional encodings
 - Masked multi-head self-attention
 - Encoder–decoder cross-attention
