@@ -89,3 +89,7 @@ def train_model():
     # Save trained model weights
     torch.save(model.state_dict(), "transformer_en_it.pt")
     print("Training complete! Model weights saved to 'transformer_en_it.pt'. 🎉")
+
+
+if __name__ == "__main__":
+    train_model()
