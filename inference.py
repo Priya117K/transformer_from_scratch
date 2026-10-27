@@ -325,31 +325,4 @@ if __name__ == "__main__":
                 attention_output = gr.Plot(label="Cross-attention heatmap")
                 latency_output = gr.Number(label="Execution latency (seconds)", precision=3)
 
-        gr.Examples(
-            examples=[
-                ["The cat sat on the mat."],
-                ["Good morning, how are you?"],
-                ["I would like a glass of water, please."],
-            ],
-            inputs=input_text,
-        )
-        translate_button.click(
-            fn=translate_and_visualize,
-            inputs=[
-                input_text,
-                decoding_strategy,
-                temperature,
-                repetition_penalty,
-                layer_idx,
-                head_idx,
-            ],
-            outputs=[translation_output, attention_output, latency_output],
-            concurrency_limit=1,
-        )
-
-    demo.launch(
-        server_name="0.0.0.0",
-        server_port=7860,
-        share=True,
-        theme=gr.themes.Soft(),
-    )
+     
