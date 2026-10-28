@@ -16,6 +16,6 @@ COPY inference.py train.py ./
 COPY models ./models
 COPY data ./data
 
-EXPOSE 7860
+EXPOSE 
 
 CMD ["python", "inference.py"]
