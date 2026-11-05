@@ -57,9 +57,11 @@ The Transformer consists of two major components:
 <img width="1241" height="440" alt="Screenshot 2026-10-18 082101" src="https://github.com/user-attachments/assets/a80a6160-ef1f-4891-91d4-52a7388d9d21" />
 <img width="1363" height="643" alt="Screenshot 2026-10-18 090434" src="https://github.com/user-attachments/assets/b40bec2e-47e0-4363-a92e-10d9689eadb5" />
 <img width="1363" height="645" alt="Screenshot 2026-10-18 091942" src="https://github.com/user-attachments/assets/a7a72dcf-0203-4175-8fc1-dcbb1a539986" />
+
 <img width="1359" height="578" alt="Screenshot 2026-10-18 100310" src="https://github.com/user-attachments/assets/3f5fb796-dccf-475b-9412-f4f4027d2cb6" />
 <img width="1366" height="584" alt="Screenshot 2026-10-18 100325" src="https://github.com/user-attachments/assets/dc664834-600b-4c16-9ea3-cf7131670083" />
 <img width="1244" height="408" alt="Screenshot 2026-10-18 102406" src="https://github.com/user-attachments/assets/64495c73-03ba-4643-a58e-3b2a1135cbd3" />
+
 <img width="1202" height="629" alt="Screenshot 2026-10-18 104032" src="https://github.com/user-attachments/assets/1fb92f20-1f99-47f0-b575-2cd1f794d7ef" />
 <img width="1000" height="514" alt="Screenshot 2026-10-18 110328" src="https://github.com/user-attachments/assets/39217b08-cc03-464d-b2b8-4fd44c089bfb" />
 <img width="1208" height="553" alt="Screenshot 2026-10-18 110402" src="https://github.com/user-attachments/assets/b6e94da5-81e7-43b4-85d4-b792e0e52458" />
@@ -91,7 +93,7 @@ The Transformer consists of two major components:
           │ Add & Norm       │
           └────────┬─────────┘
                    │
-             Encoder Output
+             Encoder's Output
                    │
                    ▼
           ┌──────────────────┐
@@ -206,5 +208,3 @@ Run the training or inference scripts using the commands defined by your impleme
   <br><br>
   <a href="https://github.com/Priya117K">Priyadharshini K · GitHub</a>
 </p>
-
-.
